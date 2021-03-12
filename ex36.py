@@ -41,7 +41,9 @@ def age():
         else:
             print("Please enter a valid number.")
 
-    if age > 75:
+    if age > 100:
+        print("Congratulations on living so long.")
+        age = int(age)
         phase = "Phase 1B"
 
     elif 75 >= age >= 65:
@@ -52,9 +54,8 @@ def age():
         risk = ""
         phase = risk_path(risk) #need to change global variable by returning new value in function and equalling that value to global variable
 
-    elif age > 100:
-        print("Congratulations on living so long.")
-        age = int(age)
+    elif age > 75:
+        phase = "Phase 1B"
 
     elif age < 13:
         print("Congratulations for being alive on this world up until now! You have had at most a 0.01% chance of being unalive at this point. ")
